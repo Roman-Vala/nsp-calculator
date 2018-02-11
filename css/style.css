@@ -1,0 +1,257 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
+
+
+/* Basic reset */
+* {
+	/* margin: 0;
+	padding: 0; */
+	box-sizing: border-box;
+	
+	
+}
+
+/* BG gradient */
+/* html {
+	background: #229ad7;
+  background-image: linear-gradient(to bottom, rgba(34,156,219,1) 0%, rgba(10,114,187,1) 100%);
+  background-attachment: fixed;
+} */
+
+/* Calculator */
+#calculator {
+	position: absolute;
+	top: 278px;
+	left: 567px;
+	width: 333px;
+	height: auto;
+	/* margin: 100px auto; */
+	padding: 20px 20px 9px;
+	/* background: #none; */
+	/* background: linear-gradient(#c9dd84, #9fcb96); */
+	border-radius: 5px;
+	border: rgba(105, 105, 105, 0.2) 2px solid;
+	font: 400 46px "Quicksand", sans-serif;
+}
+
+#calculatorheader {
+	padding: 10px;
+	margin-bottom: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px 5px 0px 0px;
+    text-align: center;
+}
+
+/* Top */
+.top  span.clear{
+	float: left;
+}
+
+/* Screen styling */
+
+
+.top .screen {
+  height:50px;
+	width: 100%;
+	padding: 0 10px;
+	background: rgb(184, 221, 224);
+	border-radius: 5px;
+  margin-bottom:10px;
+	/* Typography */
+	font-size: 30px;
+	line-height: 50px;
+	color: rgb(46, 46, 46);
+	text-align: right;
+  overflow:auto;
+}
+
+/* Clear floats */
+.keys  {
+  overflow: hidden;
+}
+
+/* Keys */
+.keys span, .top span.clear {
+	float: left;
+	position: relative;
+	top: 0;
+	background: #6d8dac;
+	font-size:27px;
+	cursor: pointer;
+	width: 66px;
+	height: 46px;
+	border-radius: 5px;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+	margin: 0 7px 11px 0;
+	color: #ffffff;
+	line-height: 46px;
+	text-align: center;
+	user-select: none;
+  outline: 0 solid;
+	/* hover and active state transitions */
+	transition: all 0.2s ease;
+}
+
+/* Unique key styling */
+.keys span.operator {
+	background: #536ea5;
+	margin-right: 0;
+}
+
+.keys span.multi {
+	float: right;
+	height: 103px;
+	line-height: 103px;
+	margin-right: 0;
+}
+
+.keys span.zero {
+	width: 212px;
+	height: 55px;
+	line-height: 55px;
+}
+
+.keys span.operator sup {
+  font-size: 50%;
+  vertical-align: top;
+  color:#f1c851;
+}
+
+.keys span.eval {
+	background: #d6643f;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+	color: #ffffff;
+	width: 66px;
+	height: 55px;
+	line-height: 55px;
+	margin-right: 0;
+	float: right;
+}
+
+span.clear {
+	/* background: #523d98; */
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+	margin-right: 0;
+	float: right;
+	
+}
+
+/* hover effects */
+.keys span:hover {
+	background: #01627a;
+	color: white;
+}
+
+.keys span.eval:hover {
+	background: #f37c4c;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+	color: #ffffff;
+}
+
+.keys span.operator:hover {
+	background: #5d7bba;
+	color: #ffffff;
+}
+
+.top span.clear:hover {
+	background: #f68991;
+	box-shadow: 0px 4px #d3545d;
+	color: white;
+}
+
+/* Simulating "pressed" effect */
+.keys span:active {
+	box-shadow: 0px 0px #6b54d3;
+	top: 4px;
+}
+
+.keys span.eval:active {
+	box-shadow: 0px 0px #717a33;
+	top: 4px;
+}
+
+.top span.clear:active {
+	top: 4px;
+	box-shadow: 0px 0px #d3545d;
+}
+
+#board {
+	/* background: #717a33; */
+	width: 550px;
+	height: 650px;
+	margin-right: 30px;
+	border-radius: 5px;
+	border: rgba(105, 105, 105, 0.2) 2px solid;
+	display: grid;
+	grid-template-rows: 100px  1fr 40px;
+	/* grid-template-columns: 1fr 1fr 1fr; */
+	font: 400 16px "Quicksand", sans-serif;
+
+
+	
+	
+}
+
+.container {
+	/* display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	padding-top: 60px; */
+	
+
+	
+}
+
+.list{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	
+	height: 450px;
+	list-style: none;
+	padding: 10px;
+	margin: 40px 0 0 0;
+	
+	
+	
+	
+}
+.list li {
+	margin-left: 20px;
+	padding-bottom: 5px;
+}
+
+
+#board-header, #result {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	margin-right: 30px;
+	justify-content: flex-end;	
+}
+
+#result {
+	
+	margin-right: 30px;
+	align-self: center;
+}
+
+#customer, #jobname {
+	border: 0;
+	/* outline: 0; */
+	font-family:inherit;
+	font-size: 16px;
+	border-bottom: 2px solid rgba(7, 127, 143, 0.288);
+	/* padding: 3px; */
+	margin-left: 5px;
+	width: 400px;
+	
+}
+.deleteIcon{
+	color:#d6643f;
+	margin-left: 10px;
+}

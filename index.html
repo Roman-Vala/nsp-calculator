@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Javascript Calculator with Keyboard Input</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div id="board">
+			<div id="board-header">
+			<label for="customer">Customer:
+			<input type="text" id="customer">
+			</label>
+			<br>
+			
+			<label for="jobname">Job:
+			<input type="text" id="jobname">
+			</label>
+			</div>
+				<ul id="item-list" class="list">
+					
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					<li>230x1520x6<i class="fa fa-minus-square-o deleteIcon"></i></li>
+					
+					
+					
+					
+				</ul>
+			<div id="result">
+				total: 340.43 m2
+			</div>
+		</div>
+
+		<div id="calculator" role="application">
+			<!-- Screen -->
+			<div id="calculatorheader" class="noselect">Click here to move me</div>
+			<div class="top">
+				<div class="screen"></div>
+			</div>
+			
+			<div class="keys" >
+				<!-- operators and other keys -->
+				<span tabindex="0">7</span>
+				<span tabindex="0">8</span>
+				<span tabindex="0">9</span>
+				<span tabindex="0" class="clear">C</span>
+				<span tabindex="0">4</span>
+				<span tabindex="0">5</span>
+				<span tabindex="0">6</span>
+				<span tabindex="0" class="operator multi">x</span>
+				
+				<span tabindex="0">1</span>
+				<span tabindex="0">2</span>
+				<span tabindex="0">3</span>
+				<span tabindex="0" class="zero">0</span>
+				<span tabindex="0" class="eval">=</span>
+			</div>
+		</div>
+
+
+	</div>
+	
+
+	
+
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script  src="js/index2.js"></script>
+
+
+
+
+</body>
+
+</html>
