@@ -80,8 +80,8 @@ for(var i = 0; i < keys.length; i++) {
 				populateMsmtsList(msmtsList.msmts);
 				updateTotal();
 				input.innerHTML = '';
-				console.log(msmtsList.msmts);
-				console.log(msmtsList.total);
+				// console.log(msmtsList.msmts);
+				// console.log(msmtsList.total);
 		}
 		
 		// Javascript checks
