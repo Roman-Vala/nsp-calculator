@@ -2,9 +2,30 @@
 msmtsList = {
 	msmts : [],
 	total: 0
-}
+};
 
+function populateMsmtsList(items){
+	let html = '';
 
+	items.forEach(function(item){
+		html += `<li class="">
+		${item}
+		<a href="#" class="">
+		<i class="fa fa-minus-square-o deleteIcon"></i>
+		</a>
+	</li>`;
+	});
+
+	// Insert list items
+	document.querySelector("#item-list").innerHTML = html;
+};
+
+function updateTotal(){
+	let html = `total: ${msmtsList.total} m2`;
+	document.querySelector("#result").innerHTML = html;
+};
+
+updateTotal();
 
 $( "#calculator" ).draggable({
   handle: "#calculatorheader"
@@ -50,12 +71,15 @@ for(var i = 0; i < keys.length; i++) {
 				equation = equation.replace(/.$/, '');
       
 			// use javascript's eval function to get the result
-      
+      //****
 			if(equation)
 				input.innerHTML = eval(equation)/1000000;	
 				decimalAdded = false;
 				msmtsList.msmts.push(equation.replace(/\*/g, 'x'));
 				msmtsList.total=parseFloat((msmtsList.total+=Number(input.innerHTML)).toFixed(2));
+				populateMsmtsList(msmtsList.msmts);
+				updateTotal();
+				input.innerHTML = '';
 				console.log(msmtsList.msmts);
 				console.log(msmtsList.total);
 		}
@@ -167,7 +191,13 @@ document.onkeydown = function(event) {
 			
 			input.innerHTML = eval(equation)/1000000;
       //reset decimal added flag
-      decimalAdded =false;
+			decimalAdded =false;
+			//**** */
+			msmtsList.msmts.push(equation.replace(/\*/g, 'x'));
+				msmtsList.total=parseFloat((msmtsList.total+=Number(input.innerHTML)).toFixed(2));
+				populateMsmtsList(msmtsList.msmts);
+				updateTotal();
+				input.innerHTML = '';
 	}
 	if (inputVal == '' && (key_code==13 || key_code==187 && event.shiftKey == false)) {
 			
