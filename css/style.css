@@ -225,7 +225,7 @@ span.clear {
 }
 
 
-#board-header, #result {
+#board-header {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
@@ -237,6 +237,9 @@ span.clear {
 	
 	margin-right: 30px;
 	align-self: center;
+	text-align: right
+	
+	
 }
 
 #customer, #jobname {
@@ -253,4 +256,8 @@ span.clear {
 .deleteIcon{
 	color:#d6643f;
 	margin-left: 10px;
+}
+.total {
+	font-size: 20px;
+	font-weight: bold;
 }

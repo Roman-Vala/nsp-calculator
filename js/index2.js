@@ -1,16 +1,22 @@
 
 msmtsList = {
 	msmts : [],
-	total: 0
+	total : function(){
+		return this.msmts.reduce((total, amount) => total + eval(amount.replace(/x/g, '*')),0); 
+	}
 };
+
+// const sumss = msmtsList.msmts.reduce((total, amount) => total + eval(amount.replace(/x/g, '*')),0); 
+// console.log(sumss);
 
 function populateMsmtsList(items){
 	let html = '';
 
-	items.forEach(function(item){
+	items.forEach(function(item,index){
 		html += `<li class="">
+		
 		${item}
-		<a href="#" class="">
+		<a href="#" class="${index}">
 		<i class="fa fa-minus-square-o deleteIcon"></i>
 		</a>
 	</li>`;
@@ -21,7 +27,7 @@ function populateMsmtsList(items){
 };
 
 function updateTotal(){
-	let html = `total: ${msmtsList.total} m2`;
+	let html = `total: <span class="total">  ${(msmtsList.total()/1000000).toFixed(2)}</span> m<sup>2</sup>`;
 	document.querySelector("#result").innerHTML = html;
 };
 
@@ -31,7 +37,19 @@ $( "#calculator" ).draggable({
   handle: "#calculatorheader"
 });
 
-
+//delete measurements from list
+document.getElementById("item-list").addEventListener("click", function(e) {
+	// e.target is the clicked element!
+	// If it was a list item
+	if(e.target && e.target.nodeName == "I") {
+		// remove targeted item from array
+		let delItemIndex = e.target.parentNode.className;
+		msmtsList.msmts.splice(delItemIndex,1);
+		populateMsmtsList(msmtsList.msmts);
+		updateTotal();
+		// console.log(e.target.parentNode.className);
+	}
+});
 
 
 //----------------------------------------------------------
@@ -76,9 +94,10 @@ for(var i = 0; i < keys.length; i++) {
 				input.innerHTML = eval(equation)/1000000;	
 				decimalAdded = false;
 				msmtsList.msmts.push(equation.replace(/\*/g, 'x'));
-				msmtsList.total=parseFloat((msmtsList.total+=Number(input.innerHTML)).toFixed(2));
+				// msmtsList.total=parseFloat((msmtsList.total+=Number(input.innerHTML)).toFixed(2));
 				populateMsmtsList(msmtsList.msmts);
 				updateTotal();
+			
 				input.innerHTML = '';
 				// console.log(msmtsList.msmts);
 				// console.log(msmtsList.total);
@@ -194,7 +213,7 @@ document.onkeydown = function(event) {
 			decimalAdded =false;
 			//**** */
 			msmtsList.msmts.push(equation.replace(/\*/g, 'x'));
-				msmtsList.total=parseFloat((msmtsList.total+=Number(input.innerHTML)).toFixed(2));
+				// msmtsList.total=parseFloat((msmtsList.total+=Number(input.innerHTML)).toFixed(2));
 				populateMsmtsList(msmtsList.msmts);
 				updateTotal();
 				input.innerHTML = '';
