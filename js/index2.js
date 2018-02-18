@@ -13,12 +13,11 @@ function populateMsmtsList(items){
 	let html = '';
 
 	items.forEach(function(item,index){
-		html += `<li class="">
-		
-		${item}
+		html += `<li class="">		
 		<a href="#" class="${index}">
 		<i class="fa fa-minus-square-o deleteIcon"></i>
 		</a>
+		${item}
 	</li>`;
 	});
 
@@ -27,7 +26,7 @@ function populateMsmtsList(items){
 };
 
 function updateTotal(){
-	let html = `total: <span class="total">  ${(msmtsList.total()/1000000).toFixed(2)}</span> m<sup>2</sup>`;
+	let html = `total: <span class="total"> ${(msmtsList.total()/1000000).toFixed(2)}</span> m<sup>2</sup>`;
 	document.querySelector("#result").innerHTML = html;
 };
 

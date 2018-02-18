@@ -5,10 +5,10 @@
 * {
 	/* margin: 0;
 	padding: 0; */
-	box-sizing: border-box;
-	
-	
+	box-sizing: border-box;	
 }
+
+a {text-decoration: none;}
 
 /* BG gradient */
 /* html {
@@ -210,9 +210,9 @@ span.clear {
 	flex-wrap: wrap;
 	align-content: flex-start;
 	
-	height: 450px;
+	height: 466px;
 	list-style: none;
-	padding: 10px;
+	padding: 10px 15px;
 	margin: 40px 0 0 0;
 	
 	
@@ -220,8 +220,9 @@ span.clear {
 	
 }
 .list li {
-	margin-left: 20px;
-	padding-bottom: 5px;
+	
+	padding: 2px 0px 2px 10px;
+	width: 130px;
 }
 
 
@@ -254,8 +255,8 @@ span.clear {
 	
 }
 .deleteIcon{
-	color:#d6643f;
-	margin-left: 10px;
+	color:#aa4432;
+	
 }
 .total {
 	font-size: 20px;
